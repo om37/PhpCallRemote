@@ -183,6 +183,12 @@ public class MainActivity extends Activity {
 		tv.setText(s);
 	}
 
+	
+	public void testFunc()
+	{
+		
+	}
+	
 	public void writeButton(View view)
 	{
 		createMessageToWrite();
