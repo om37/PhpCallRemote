@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="om37.phpcall"
+    android:versionCode="5"
+    android:versionName="1.0.4" >
+
+    <uses-sdk
+        android:minSdkVersion="16" 
+        android:targetSdkVersion="18" /> <!-- Min SDK 14 to allow AARs. 16 to allow NdefRecord helper methods -->
+
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Request NFC permission -->
+    <uses-permission android:name="android.permission.NFC" /> <!-- Request NFC permission -->
+    
+    <!-- <uses-feature android:name="android.hardware.nfc" android:required="true" /> -->
+    <!-- Uses feature will stop devices without NFC capability finding the app in playstore. Commented for development -->
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="om37.phpcall.MainActivity"
+            android:label="@string/app_name" >
+            <!-- android:theme="@android:style/Theme.NoDisplay" --><!-- Causes no gui to be displayed -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+            <!-- Filter for text based NFC tags -->
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            
+            <!-- Filter for NFC tags with my URI -->
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="http"
+                      android:host="om37nfcregistration.net46.net" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

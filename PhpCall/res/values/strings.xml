@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PhpCall</string>
+    <string name="action_settings">Settings</string>
+    <string name="appTitle">PHP Sender</string>
+    <string name="sendPostButton">Send Post</string>
+    <string name="username">Username...</string>
+    <string name="room">Room Number</string>
+    <string name="toWrite">Enter text to write...</string>
+    <string name="writeButton">Write</string>
+
+</resources>
