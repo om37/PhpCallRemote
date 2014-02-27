@@ -186,7 +186,7 @@ public class MainActivity extends Activity {
 	
 	public void testFunc()
 	{
-		
+		Toast.makeText(getApplicationContext(), "HelloWorld", Toast.LENGTH_LONG).show();
 	}
 	
 	public void writeButton(View view)
