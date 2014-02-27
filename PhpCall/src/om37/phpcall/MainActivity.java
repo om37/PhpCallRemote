@@ -186,7 +186,10 @@ public class MainActivity extends Activity {
 	
 	public void testFunc()
 	{
-		Toast.makeText(getApplicationContext(), "HelloWorld", Toast.LENGTH_LONG).show();
+		for(int i = 0; i < 2; i++)
+		{
+			Toast.makeText(getApplicationContext(), "HelloWorld", Toast.LENGTH_LONG).show();
+		}
 	}
 	
 	public void writeButton(View view)
