@@ -33,6 +33,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * A starting point for my nfc project.
+ * Contains code experimenting with reading from and writing to tags.
+ * 
+ * Lots of help from android developer site
+ * @author Odie
+ *
+ */
+
 public class MainActivity extends Activity {
 
 	NfcAdapter mAdapter;//NFC adapter
@@ -228,7 +237,7 @@ public class MainActivity extends Activity {
 				
 				Toast.makeText(getApplicationContext(), "Trying", Toast.LENGTH_SHORT).show();
 				sleep(3000);
-				
+				//Some test comment for github
 				try
 				{					
 					if(theTag != null)
